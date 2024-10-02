@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="coEduUniquindioPoo.Controladores.ContactoController">
+
+    <TableView fx:id="tablaContactos">
+        <columns>
+            <TableColumn fx:id="columnaNombre" prefWidth="114.0" text="Nombre" />
+            <TableColumn fx:id="columnaApellido" prefWidth="70.0" text="Apellido" />
+            <TableColumn fx:id="columnaTelefono" prefWidth="82.0" text="Teléfono" />
+            <TableColumn fx:id="columnaEmail" prefWidth="107.0" text="Email" />
+            <TableColumn fx:id="columnaFechaCumpleaños" prefWidth="140.0" text="Fecha de cumpleaños" />
+            <TableColumn fx:id="columnaFoto" prefWidth="140.0" text="Foto" />
+        </columns>
+
+    </TableView>
+
+    <HBox alignment="CENTER" spacing="10">
+        <Label text="Nombre:" />
+        <TextField fx:id="nombreInput" />
+        <Label text="Apellido:" />
+        <TextField fx:id="apellidoInput" />
+        <Label text="Teléfono:" />
+        <TextField fx:id="telefonoInput" />
+        <Label text="Email:" />
+        <TextField fx:id="emailInput" />
+    </HBox>
+
+    <HBox alignment="CENTER" spacing="10">
+        <Label text="Cumpleaños:" />
+        <DatePicker fx:id="cumpleInput" />
+        <Label text="Foto URL:" />
+        <TextField fx:id="urlFotoInput" />
+    </HBox>
+
+    <HBox alignment="CENTER" spacing="10">
+        <Button onAction="#agregarContacto" text="Agregar" />
+        <Button onAction="#actualizarContacto" text="Actualizar" />
+        <Button onAction="#eliminarContacto" text="Eliminar" />
+    </HBox>
+
+    <HBox alignment="CENTER" spacing="10">
+        <ComboBox fx:id="filtroComboBox" promptText="Buscar por:" />
+        <TextField fx:id="filtroInput" />
+        <Button onAction="#buscarContacto" text="Buscar" />
+    </HBox>
+
+</VBox>
